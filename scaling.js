@@ -26,4 +26,4 @@ function scaling(){
         .attr('y', function(d,i){
             return i * 50;
         })
-    }
+ }
