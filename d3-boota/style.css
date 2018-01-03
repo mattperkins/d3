@@ -1,0 +1,20 @@
+body,
+.wrapper {
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+}
+li {
+  padding: 20px;
+  margin: 10px;
+}
+h1 {
+  margin-left: 50px;
+}
+svg {
+  border: 1px solid #333;
+  width: 800px;
+  height: 450px;
+}
