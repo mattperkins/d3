@@ -36,6 +36,15 @@ arc.append("path")
         return color(d.data.percentage)
     })
 
-let label = svg.selectAll("text")
-    .data(pie(data))
+let label = d3.arc()
+    .outerRadius(radius)
+    .innerRadius(0)
 
+arc.append("text")
+    .attr("transform", function(d){
+        return "translate(" + label.centroid(d) + ")"
+    })
+    .attr("text-anchor", "middle")
+    .text(function(d) {
+        return d.data.category + ":" + d.data.percentage +"%"
+    })
