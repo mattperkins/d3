@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Billboard.js</title>
+ <script src="https://d3js.org/d3.v4.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+ <style>
+  #chart{
+   height: 500px;
+  }
+ </style>
+</head>
+<body>
+<div id="chart"></div> 
+
+<script>
+bb.generate({
+ bindto: "#chart",
+ data: {
+  columns: [
+   ["data1", 230, 200, 100, 170, 250, 120, 3],
+   ["data2", 260, 100,140, 35, 110, 50, 200],
+  ],
+  types: {
+   data1: "radar",
+   data2: "line",
+  },
+  colors: {
+   data1: "#e7676d",
+   data2: "#44b3dc"
+  }
+ } //data
+})
+
+</script>
+</body>
+</html>
