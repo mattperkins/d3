@@ -1,6 +1,6 @@
 // comment in src in index.html
 
-let svgWidth = 600, svgHeight = 500
+let svgWidth = 800, svgHeight = 500
 
 let svg = d3.select("svg")
     .attr("width", svgWidth)
