@@ -1,6 +1,6 @@
 console.log("hello, world!");
 
-d3.json("http://dormshed.com/data.json", function(lemon) {
+d3.json("./data.json", function(lemon) {
   var canvas = d3
     .select("body")
     .append("svg")
