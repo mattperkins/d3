@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Billboard.js</title>
+ <script src="https://d3js.org/d3.v4.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+ <style>
+  #chart{
+   height: 500px;
+  }
+ </style>
+</head>
+<body>
+<div id="chart"></div> 
+
+<script>
+let chart = bb.generate({
+ data: {
+  colors: {
+   data1: "#2ccb3e",
+   data2: "#f36d73",
+   data3: "#4fcffe",
+   data4: "#f6c600"
+  },
+  columns: [
+   ["data1", 260, 100,140, -35, 110, 50, 200],
+   ["data2", 30, -200, 100, 200, 150, 250]
+  ],
+  type: "donut",
+  onclick: () => {
+ chart.load({
+  columns: [
+   ["data4", 130, -50, 210, 30, 20, 10]
+  ]
+ }) 
+  }
+ }, //data
+  bar: {
+   width: {
+    ratio: .7
+   }
+  },
+  donut: {
+   title: 'Ratio'
+  },
+ bindto: "#chart"
+})
+
+setTimeout(() => {
+ chart.load({
+  columns: [
+   ["data3", 130, -150, 200, 300, -200, 100]
+  ]
+ }) 
+}, 1000)
+</script>
+</body>
+</html>
