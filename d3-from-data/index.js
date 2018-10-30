@@ -2,13 +2,13 @@ const data = [
  {
   width: 200,
   height: 150,
-  fill: 'yellow'
+  fill: '#f5d443'
  }
 ]
-const svg = d3.select('svg')
+
+let svg = d3.select("svg").append("rect")
  
-const rect = svg.select('rect')
  .data(data)
- .attr('width', (x)=>{ return x.width })
- .attr('height', (x)=>{ return x.height })
- .attr('fill', (x)=>{ return x.fill })
+ .attr('width', x => x.width )
+ .attr('height', x => x.height )
+ .attr('fill', x => x.fill )
