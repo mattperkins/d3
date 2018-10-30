@@ -6,8 +6,18 @@ const data = [
 
 const svg = d3.select("svg")
 
-const rect = svg.selectAll("rect") 
+// join data to rects
+const rects = svg.selectAll("rect") 
  .data(data)
+
+// add attrs to rects already in the DOM
+rects.attr('width', x => x.width )
+ .attr('height', x => x.height )
+ .attr('fill', x => x.fill )
+
+// append the enter selection to DOM
+rects.enter()
+ .append("rect")
  .attr('width', x => x.width )
  .attr('height', x => x.height )
  .attr('fill', x => x.fill )
