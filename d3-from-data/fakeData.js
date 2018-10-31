@@ -2,6 +2,15 @@ const cy = 300
 // select svg container first
 const svg = d3.select("svg")
 
+toggleCol = (function(){
+ // var currentCol = "white"
+
+ return function(){
+ //  currentCol = currentCol == "white" ? "red" : "white"
+  d3.select(this).style("stroke", "#111")
+ }
+})()
+
 d3.json('fakeData.json').then(data =>{
  const circs = svg.selectAll('circle')
   .data(data)
@@ -19,5 +28,5 @@ d3.json('fakeData.json').then(data =>{
      .attr('cx', d => d.distance)
      .attr('r', d => d.radius)
      .attr('fill', d => d.fill)
- 
+     .on('click', toggleCol)
 })
